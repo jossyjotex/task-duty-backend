@@ -6,6 +6,7 @@ const connect = require("./config/db");
 const cors = require('cors')
 // const TASKS = require("../model/taskModel");
 const taskRouter = require("./routes/taskRouter");
+const userRouter = require('./routes/userRouter')
 
 // MIDDLEWARE
 app.use(express.json());
@@ -14,6 +15,7 @@ app.use(cors())
 // AP'S
 
 app.use("/api", taskRouter);
+app.use('/api', userRouter)
 
 // SERVER AND DB
 

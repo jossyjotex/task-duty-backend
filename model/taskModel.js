@@ -18,6 +18,13 @@ const taskSchema = new Schema(
       enum: ["important", "urgent"],
       required: true,
     },
+    createdBy:{
+      type:mongoose.Types.ObjectId,
+      ref:'user',
+      required:true
+
+    }
+
   },
   { timestamps: true }
 );
